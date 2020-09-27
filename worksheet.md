@@ -239,3 +239,11 @@ Your job is to create such an iterator.  It must iterate over every cell in the 
 Your boss has suggested the following new gameplay:  When one character moves on top of another, they become "stuck" to each other.  Their `redness` is the average of each `redness` and their `movement` is the minimum of each `movement`.  That "double-character" could then move onto another character to make a "triple-character", etc.  Your boss also thinks that the composite pattern is the way to implement this.
 
 The composite pattern can be quite variable, and it is easy to stray from it in situations where you think it might be useful.  Come up with a design for the above suggestion that _is as close as possible to the composite pattern_.  Explain where it differs and whether you think that matters.  Is your solution a valid composite?
+
+//count on the main to display all the other components in the program so the actors, the cell, the grid
+//the main as composite object and actor, the others as leaf objects
+//have the same interface across each object
+//the whole thing is like a tree structure so the leaf can point to the parent
+//moves on top of that character it becomes the new position, color changes and becomes average color
+//the movement becomes minimum movement
+//implement catching to store the values of the redness temporarily to save the traversals, the value of the redness from double character, to movement
